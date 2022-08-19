@@ -1,0 +1,20 @@
+#include<stdio.h>
+int main()
+{
+   int k, l, m, count=1;
+   int rows;
+   clrscr();
+   printf("\n Please enter the number of rows for the Numeric Pattern: ");
+   scanf("%d",&rows);
+   for (k = 1; k <= rows; k++) {
+      m = count;
+      for (l = 1; l <= k; l++) {
+         printf("%d",m);
+         m = m - (rows + l - k);
+      }
+      printf("\n");
+      count = count + 1 + rows - k;
+   }
+   getch();
+   return 0;
+}
